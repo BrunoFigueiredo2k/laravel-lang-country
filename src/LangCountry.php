@@ -337,7 +337,7 @@ class LangCountry
         if (file_exists(lang_path('lang-country-overrides/' . $filename))) {
             $resource = lang_path('lang-country-overrides/' . $filename);
         } else {
-            $resource = __DIR__ . '/LangCountryData/' . $filename;
+            $resource = storage_path() . '/LangCountryData/' . $filename;
         }
 
         return json_decode(file_get_contents($resource), true);
